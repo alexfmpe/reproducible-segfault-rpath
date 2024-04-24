@@ -1,0 +1,29 @@
+cabal-version: 3.4
+name: a
+version: 0.1
+build-type: Simple
+
+library
+  hs-source-dirs: src
+
+  build-depends:
+      base
+    , ghcjs-dom
+    , jsaddle
+
+  exposed-modules:
+    A
+
+executable a
+  hs-source-dirs: src-bin
+  main-is: main.hs
+
+  -- fixes seg fault but triggers rpath error when running
+  -- ghc-options: -dynamic
+
+  -- avoids both issues
+  -- ghc-options: -fwhole-archive-hs-libs
+
+  build-depends:
+      base
+    , a
