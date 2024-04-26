@@ -8,10 +8,10 @@ let
     };
   };
 
-  # https://github.com/NixOS/nixpkgs/pull/304640
+  # https://github.com/reckenrode/nixpkgs/tree/ld64
   nixpkgsSrc = builtins.fetchTarball {
-    url = "https://github.com/NixOS/nixpkgs/archive/69d32db54427d937384cfcede967af2bf30d9535.tar.gz";
-    sha256 = "sha256:0zn53j643wvvi5xh5b8j6wfg0qi6pwyvmjb4bv7c7xqvmmvp3fdz";
+    url = "https://github.com/NixOS/nixpkgs/archive/7a616863c22c8f5d4b12bfe8621f725b8cacf56b.tar.gz";
+    sha256 = "sha256:1ihiqwd544rixf050qbqwif6a13bngibvqjgy8mas0dpb1gxbw5g";
   };
 
   nixpkgs = import nixpkgsSrc { inherit config; };
